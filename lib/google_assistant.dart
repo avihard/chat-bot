@@ -120,7 +120,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     return new Scaffold(
       backgroundColor: Color(0xf4f4f4f4f4),
       appBar: new AppBar(
-        title: new Text("Google Assistant"),
+        title: new Text("Chat Bot"),
         backgroundColor: Colors.blue,
       ),
       body: new Column(children: <Widget>[

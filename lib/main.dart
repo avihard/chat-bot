@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Example Dialogflow Flutter',
+      title: 'Rama Chatbot',
       theme: new ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Dialogflow'),
+      debugShowCheckedModeBanner: false,
+      home: new MyHomePage(title: 'ChatBot'),
     );
   }
 }
@@ -36,30 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text(widget.title),
       ),
       body: new Column(children: <Widget>[
-//        new Container(
-//          margin: EdgeInsets.all(10.0),
-//          child: new RaisedButton(
-//            onPressed: () {
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(builder: (context) => PageDialogflowV1()),
-//              );
-//            },
-//            child: Text("Dialogflow v1"),
-//          ),
-//        ),
-//        new Container(
-//          margin: EdgeInsets.all(10.0),
-//          child: new RaisedButton(
-//            onPressed: () {
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(builder: (context) => HomePageDialogflowV2()),
-//              );
-//            },
-//            child: Text("Dialogflow v2"),
-//          ),
-//        ),
+//
         new Container(
           margin: EdgeInsets.all(10.0),
           child: new RaisedButton(
@@ -69,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (context) => GoogleAssistant()),
               );
             },
-            child: Text("GoogleAssistant"),
+            child: Text("Rama"),
           ),
         )
       ]),

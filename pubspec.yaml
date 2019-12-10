@@ -25,7 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_dialogflow: ^0.1.0
   flutter_linkify: ^2.1.0
-  url_launcher: ^5.0.1
+  url_launcher: ^5.2.0
 
 dev_dependencies:
   flutter_test:
