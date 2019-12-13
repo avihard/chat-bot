@@ -109,7 +109,10 @@ class _GoogleAssistant extends State<GoogleAssistant> {
       type: true,
     );
     setState(() {
-      _messages.insert(0, message);
+      if( text.isNotEmpty ){
+        _messages.insert(0, message);
+      }
+
     });
     Response(text);
   }
