@@ -13,9 +13,10 @@ class SimpleMessage extends StatelessWidget {
   List<Widget> otherMessage(context) {
     return <Widget>[
       new Container(
-        margin: const EdgeInsets.only(right: 16.0),
+
+        margin: const EdgeInsets.only(right: 16.0, top:8),
         child: new CircleAvatar(
-          child: new Image.asset("img/googleasistant.png"),
+          child: new Image.asset("assets/icons.png"),
           backgroundColor: Colors.transparent,
         ),
       ),
@@ -74,8 +75,9 @@ class SimpleMessage extends StatelessWidget {
         ),
       ),
       new Container(
-        margin: const EdgeInsets.only(left: 16.0),
-        child: new CircleAvatar(child: new Text(this.name[0])),
+        margin: const EdgeInsets.only(left: 16.0,top: 5),
+        child: new CircleAvatar(child:
+        new Image.asset("assets/user.png")),
       ),
     ];
   }

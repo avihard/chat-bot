@@ -4,7 +4,6 @@ import 'package:chatt/widgets/simple_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 
-import 'google_assistant.dart';
 
 void main() => runApp(new MyApp());
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       debugShowCheckedModeBanner: false,
-      home: new GoogleAssistant(title: 'ChatBot'),
+      home: new GoogleAssistant(title: 'Rama'),
     );
   }
 }
