@@ -106,6 +106,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
         _messages.insert(0, message);
       });
     } else {
+      print(response.getListMessage().toString());
       List<dynamic> messages = response.getListMessage();
       for (var i = 0; i < messages.length; i++) {
         dynamic message = getWidgetMessage(messages[i]);

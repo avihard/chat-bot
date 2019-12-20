@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dialogflow/v2/message.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BasicCardWidget extends StatelessWidget {
   BasicCardWidget({this.card});
@@ -11,14 +12,23 @@ class BasicCardWidget extends StatelessWidget {
     List<Widget> buttons = [];
 
     for (var i = 0; i < this.card.buttons.length; i++) {
+    //  const url1 = this.card.buttons[i]['openUriAction']['uri'];
       buttons.add(new SizedBox(
           width: double.infinity,
-          child: new RaisedButton(
-            onPressed: () {},
+          child: new MaterialButton(
+            onPressed: () async{
+
+              final  url = this.card.buttons[i]['openUriAction']['uri'];
+              if (await canLaunch(url)) {
+              await launch(url);
+              } else {
+              throw 'Could not launch $url';
+              }
+            },
             color: Colors.green,
             textColor: Colors.white,
             child: Text(this.card.buttons[i]['title']),
-
+  //            print(this.card.buttons[i]['openUriAction']['uri']);
           )));
     }
     return buttons;
